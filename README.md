@@ -67,26 +67,26 @@ vite build
 
 ## Project Structure
 
-```plaintext
-public/              # Static assets served directly
-src/                 # Source code
-├── assets/          # Static assets (images, fonts, etc.)
-├── components/      # Reusable Vue components
-├── layouts/         # Application layouts
-├── pages/           # Route views/pages
-├── router/          # Vue Router configuration
-├── store/           # Vuex store modules
-├── styles/          # Global styles
-├── utils/           # Utility functions
-├── App.vue          # Root Vue component
-├── main.js          # Application entry point
-.browserslistrc      # Browserslist configuration
-.editorconfig        # Editor configuration
-.gitignore           # Git ignore rules
-index.html           # Main HTML file
-jsconfig.json        # JavaScript configuration
-package-lock.json    # Lockfile for npm dependencies
-package.json         # Project metadata and dependencies
-settings.json        # VSCode settings
-vite.config.js       # Vite configuration
+```
+├── public/
+├── src/
+│   ├── components/
+│   ├── mixins/
+│   ├── plugins/
+│   ├── router/
+│   ├── state/
+│   ├── styles/
+│   ├── views/
+│   ├── App.vue
+│   └── main.js
+├── .browserslistrc
+├── .editorconfig
+├── .gitignore
+├── index.html
+├── jsconfig.json
+├── package.json
+├── package-lock.json
+├── README.md
+├── settings.json
+└── vite.config.js
 ```
