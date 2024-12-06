@@ -1,4 +1,5 @@
 import {createStore} from 'vuex';
+import createPersistedState from 'vuex-persistedstate';
 export default createStore({
     state: {
         snackbar: {
@@ -7,23 +8,7 @@ export default createStore({
             icon: '',
             type: 'success',
         },
-        /*form: {
-            "Customer_Company_Name": "1800 Office Solutions",
-            "Customer_Full_Name": "Jesse C.",
-            "Customer_Address": "9111 Duke Blvd",
-            "Customer_City": "Mason",
-            "Customer_State": "OH",
-            "Customer_Postal": "45040",
-            "Customer_Phone": "4504504500",
-            "Customer_Email": "strifejeyz@mail.com",
-            "Customer_Printer": "Xerox C7025, HP E77822",
-            "Current_Lessor": "Third Party Company",
-            "Estimated_Black_Prints": "10000",
-            "Estimated_Color_Prints": "6000",
-            "Monthly_Base_Price": "$199",
-            "Lease_Term": "60 Months",
-        },*/
-        form: null,
+        is_mobile: window.innerWidth <= 768
     },
     actions: {
         SetSnackbar({commit}, params) {
@@ -63,4 +48,9 @@ export default createStore({
             state[target] = value;
         },
     },
+
+    // Persist your state
+    plugins: [createPersistedState({
+        paths: []
+    })]
 });

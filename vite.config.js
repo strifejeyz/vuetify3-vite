@@ -5,7 +5,6 @@ import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-    //base: '/wp-content/plugins/1-800-products/',
     plugins: [
         vue({
             template: { transformAssetUrls }
@@ -44,13 +43,13 @@ export default defineConfig({
     build: {
         rollupOptions: {
             output: {
-                format: 'iife', // Wraps everything in a single self-contained function
-                name: 'AiLeaseCalc', // A global name for your script
-                entryFileNames: '1800AiLeaseCalc.js',
-                assetFileNames: '1800AiLeaseCalc.css',
+                format: 'iife',
+                name: 'MyVueApp',
+                entryFileNames: 'VueApp.js',
+                assetFileNames: 'VueApp.css',
             },
         },
-        target: 'es2015', // Compatibility for older browsers
+        target: 'es2015',
         polyfillDynamicImport: true,
     },
-})
+});

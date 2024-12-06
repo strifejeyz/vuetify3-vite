@@ -4,16 +4,18 @@
  * Bootstraps Vuetify and other plugins then mounts the App`
  */
 
+import Axios from "axios";
 import App from './App.vue';
 import {createApp} from 'vue';
+import router from './router';
 import '@/styles/globals.scss';
 import Store from "./state/store";
-import Server from "@/plugins/Server";
 import "animator-css/animator.css";
 import {registerPlugins} from '@/plugins';
 
 const app = createApp(App);
-app.config.globalProperties.$axios = Server;
+app.config.globalProperties.$axios = Axios;
 registerPlugins(app);
 app.use(Store);
-app.mount('#ai-lease-calculator');
+app.use(router);
+app.mount('#app');

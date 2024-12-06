@@ -1,11 +1,9 @@
-<script setup>
-
-</script>
-
 <template>
-  $END$
+    <h1>Welcome home!</h1>
 </template>
 
-<style scoped>
+<script>
+export default {
 
-</style>
+}
+</script>
